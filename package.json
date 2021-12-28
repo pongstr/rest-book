@@ -1,11 +1,11 @@
 {
-  "name": "rest-book",
-  "displayName": "REST Book",
-  "description": "Notebook for running REST queries.",
-  "version": "5.0.1",
-  "publisher": "tanhakabir",
+  "name": "openapi",
+  "displayName": "OpenAPI v3 Notebook",
+  "description": "Notebook for running OpenAPI v3 Endpoints.",
+  "version": "0.1.0",
+  "publisher": "pongstr",
   "repository": {
-    "url": "https://github.com/tanhakabir/rest-book"
+    "url": "https://github.com/pongstr/rest-book"
   },
   "enabledApiProposals": [
     "notebookEditor"
@@ -16,72 +16,72 @@
   "categories": [
     "Notebooks"
   ],
-  "icon": "rest-book.png",
+  "icon": "openapi.png",
   "activationEvents": [
-    "onNotebook:rest-book",
-    "onLanguage:rest-book",
-    "onCommand:rest-book.secrets",
-    "onCommand:rest-book.newNotebook"
+    "onNotebook:oas3",
+    "onLanguage:oas3",
+    "onCommand:oas3.secrets",
+    "onCommand:oas3.newNotebook"
   ],
   "main": "./dist/extension-node.js",
   "contributes": {
     "commands": [
       {
-        "title": "REST Book: Secrets",
-        "command": "rest-book.secrets"
+        "title": "OpenAPI Notebook: Secrets",
+        "command": "oas3.secrets"
       },
       {
-        "title": "REST Book: Create a new blank REST Notebook",
-        "command": "rest-book.newNotebook"
+        "title": "OpenAPI Notebook: Create a new blank Notebook",
+        "command": "oas3.newNotebook"
       }
     ],
     "startEntries": [
       {
-        "title": "REST Book",
-        "description": "Notebook for running REST queries",
-        "command": "rest-book.newNotebook",
+        "title": "OpenAPI v3.0.3 Book",
+        "description": "Notebook for running OpenAPI v3.0.3 queries",
+        "command": "oas3.newNotebook",
         "category": "notebook"
       }
     ],
     "notebookRenderer": [
       {
-        "id": "rest-book",
-        "displayName": "REST Book Renderer",
+        "id": "oas3",
+        "displayName": "OpenAPI v3.0.3 Renderer",
         "entrypoint": "./dist/renderer.js",
         "requiresMessaging": "optional",
         "mimeTypes": [
-          "x-application/rest-book"
+          "x-application/oas3"
         ]
       }
     ],
     "notebooks": [
       {
-        "id": "rest-book",
-        "type": "rest-book",
-        "displayName": "REST Book",
+        "id": "oas3",
+        "type": "oas3",
+        "displayName": "OpenAPI v3.0.3 Notebook",
         "selector": [
           {
-            "filenamePattern": "*.restbook"
+            "filenamePattern": "*.oas3"
           }
         ]
       }
     ],
     "languages": [
       {
-        "id": "rest-book",
+        "id": "oas3",
         "aliases": [
-          "REST Book"
+          "OpenAPI v3.0.3 REST Book"
         ],
         "filenamePatterns": [
-          "*.rest-book.txt"
+          "*.oas3.txt"
         ]
       }
     ],
     "grammars": [
       {
-        "language": "rest-book",
-        "scopeName": "source.rest-book",
-        "path": "./syntaxes/rest-book.tmGrammar.json",
+        "language": "oas3",
+        "scopeName": "source.oas3",
+        "path": "./syntaxes/oas3.tmGrammar.json",
         "embeddedLanguages": {
           "meta.embedded.block.javascript": "javascript",
           "meta.embedded.block.json": "json",
